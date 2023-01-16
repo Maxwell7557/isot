@@ -11,8 +11,8 @@ plt.style.use('ggplot')
 np.random.seed(1234)
 import pystan
 
-answers_A = pd.read_csv('/home/katya/Downloads/output/data/A.csv')
-answers_B = pd.read_csv('/home/katya/Downloads/output/data/B.csv')
+answers_A = pd.read_csv('/home/maxwell/Downloads/output/data/A.csv')
+answers_B = pd.read_csv('/home/maxwell/Downloads/output/data/B.csv')
 
 model_code = """data {
     int<lower=0> students_count;
@@ -51,32 +51,38 @@ model {
     sigma_beta_B ~ cauchy(0, 10);
     alpha_B ~ lognormal(0, sigma_alpha_B);
     sigma_alpha_B ~ cauchy(0, 10);
-
+
+
     for(i in 1:students_count) {
         for (j in 1:items_count_A) {
-            real p;  // create a local variable within the loop to make Stan code more readable
+            real p;  // create a local variable within the loop to make Stan code more readable
+
             p = inv_logit(alpha_A[j] * (theta_A[i] - beta_A[j]));
             XA[i, j] ~ bernoulli(p);
         }
         for (j in 1:items_count_B) {
-            real p;  // create a local variable within the loop to make Stan code more readable
+            real p;  // create a local variable within the loop to make Stan code more readable
+
             p = inv_logit(alpha_B[j] * (theta_B[i] - beta_B[j]));
             XB[i, j] ~ bernoulli(p);
         }
     }
 }
 
-generated quantities {
+generated quantities {
+
     vector[items_count_A] log_lik_A[students_count];
     vector[items_count_B] log_lik_B[students_count];
-
+
+
     vector[items_count_A] p_A[students_count];
     vector[items_count_B] p_B[students_count];
     for(i in 1:students_count) {
         for (j in 1:items_count_A) {
             real p;
             p = inv_logit(alpha_A[j] * (theta_A[i] - beta_A[j]));
-            p_A[i, j] = p;
+            p_A[i, j] = p;
+
             log_lik_A[i, j] = bernoulli_lpmf(XA[i, j] | p);
         }
         for (j in 1:items_count_B) {
@@ -113,7 +119,7 @@ print(fit_model_1.to_dataframe(['beta_A', 'beta_B',
                                 'sigma_beta_A', 'sigma_beta_B']))
 
 df = fit_model_1.to_dataframe()
-df.to_csv('/home/katya/Downloads/output/1model.csv')
+df.to_csv('/home/maxwell/Downloads/output/1model.csv')
 
 chain_id = df['draw']
 
