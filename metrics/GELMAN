@@ -1,0 +1,60 @@
+Model 1
+Metric(A_1) Gelman-Rubin R`hat - : 1.4158631989576191
+Metric(A_2) Gelman-Rubin R`hat - : 2.5822595830178745
+Metric(A_3) Gelman-Rubin R`hat - : 2.1985045243070007
+Metric(A_4) Gelman-Rubin R`hat - : 2.194231842134792
+Metric(A_5) Gelman-Rubin R`hat - : 2.1934372525117327
+Metric(A_6) Gelman-Rubin R`hat - : 2.0504996204369825
+Metric(A_7) Gelman-Rubin R`hat - : 2.102270702251529
+Metric(A_8) Gelman-Rubin R`hat - : 1.8829812961334242
+Metric(B_1) Gelman-Rubin R`hat - : 2.436143916768406
+Metric(B_2) Gelman-Rubin R`hat - : 2.206314193291254
+Metric(B_3) Gelman-Rubin R`hat - : 1.4248567903044091
+Metric(B_4) Gelman-Rubin R`hat - : 1.4158196550143565
+Metric(B_5) Gelman-Rubin R`hat - : 1.9777335492381969
+Metric(B_6) Gelman-Rubin R`hat - : 2.4000045640275216
+Metric(B_7) Gelman-Rubin R`hat - : 2.3049617268882643
+Metric(B_8) Gelman-Rubin R`hat - : 2.44042580984648
+Metric(B_9) Gelman-Rubin R`hat - : 2.4178656579914612
+Metric(B_10) Gelman-Rubin R`hat - : 2.106552506568784
+
+Model 2
+Metric(A_1) Gelman-Rubin R`hat - : 1.428865361420711
+Metric(A_2) Gelman-Rubin R`hat - : 2.5614758948334666
+Metric(A_3) Gelman-Rubin R`hat - : 2.0536951510970676
+Metric(A_4) Gelman-Rubin R`hat - : 2.416784944238535
+Metric(A_5) Gelman-Rubin R`hat - : 1.9607277789419548
+Metric(A_6) Gelman-Rubin R`hat - : 2.106438624733517
+Metric(A_7) Gelman-Rubin R`hat - : 1.9597396343084306
+Metric(A_8) Gelman-Rubin R`hat - : 1.8096253467339412
+Metric(B_1) Gelman-Rubin R`hat - : 2.616497364772862
+Metric(B_2) Gelman-Rubin R`hat - : 2.790017296553717
+Metric(B_3) Gelman-Rubin R`hat - : 1.4628452426203906
+Metric(B_4) Gelman-Rubin R`hat - : 1.4187109439829646
+Metric(B_5) Gelman-Rubin R`hat - : 2.0241219208728873
+Metric(B_6) Gelman-Rubin R`hat - : 2.366653468312383
+Metric(B_7) Gelman-Rubin R`hat - : 2.934295700570408
+Metric(B_8) Gelman-Rubin R`hat - : 2.8676410377798516
+Metric(B_9) Gelman-Rubin R`hat - : 2.284371592051236
+Metric(B_10) Gelman-Rubin R`hat - : 2.6031935428311272
+
+Model 3
+Metric(A_1) Gelman-Rubin R`hat - : 1.41591175880842
+Metric(A_2) Gelman-Rubin R`hat - : 2.5866248791399946
+Metric(A_3) Gelman-Rubin R`hat - : 2.1927110737899858
+Metric(A_4) Gelman-Rubin R`hat - : 2.26851299814202
+Metric(A_5) Gelman-Rubin R`hat - : 2.1429758198476985
+Metric(A_6) Gelman-Rubin R`hat - : 2.085233205921312
+Metric(A_7) Gelman-Rubin R`hat - : 2.044235512778258
+Metric(A_8) Gelman-Rubin R`hat - : 1.7874713788339547
+Metric(B_1) Gelman-Rubin R`hat - : 2.3849339507493177
+Metric(B_2) Gelman-Rubin R`hat - : 2.2057679176248595
+Metric(B_3) Gelman-Rubin R`hat - : 1.4161870711138325
+Metric(B_4) Gelman-Rubin R`hat - : 1.415403349052506
+Metric(B_5) Gelman-Rubin R`hat - : 1.8965870785449335
+Metric(B_6) Gelman-Rubin R`hat - : 2.264423960246836
+Metric(B_7) Gelman-Rubin R`hat - : 2.1616659991408573
+Metric(B_8) Gelman-Rubin R`hat - : 2.3613834128853473
+Metric(B_9) Gelman-Rubin R`hat - : 2.219822273210898
+Metric(B_10) Gelman-Rubin R`hat - : 2.003826884650666
+
