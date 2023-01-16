@@ -2,8 +2,8 @@ import pandas as pd
 import pystan
 #from utils.psis import psisloo
 
-answers_A = pd.read_csv('/home/katya/Downloads/output/data/A.csv')
-answers_B = pd.read_csv('/home/katya/Downloads/output/data/B.csv')
+answers_A = pd.read_csv('/home/maxwell/Downloads/output/data/A.csv')
+answers_B = pd.read_csv('/home/maxwell/Downloads/output/data/B.csv')
 
 data = {
     'XA': answers_A,
@@ -14,7 +14,7 @@ data = {
 }
 
 # 2PL model
-model_3 = pystan.StanModel(file='/home/katya/Downloads/output/models/3model.stan', model_name='model_3')
+model_3 = pystan.StanModel(file='/home/maxwell/Downloads/output/models/3model.stan', model_name='model_3')
 fit_model_3 = model_3.sampling(data=data,
                                iter=3000,
                                pars=['beta_A', 'beta_B',
@@ -28,7 +28,7 @@ print(fit_model_3.to_dataframe(['beta_A', 'beta_B',
                                 'mu_beta_A', 'mu_beta_B',
                                 'sigma_beta_A', 'sigma_beta_B']))
 
-fit_model_3.to_dataframe().to_csv('/home/katya/Downloads/output/3model.csv')
+fit_model_3.to_dataframe().to_csv('/home/maxwell/Downloads/output/3model.csv')
 
 # model comparison
 log_lik2_A = fit_model_3.extract()['log_lik_A']
