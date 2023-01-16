@@ -2,14 +2,15 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-df_1 = pd.read_csv('/home/katya/Downloads/output/1model.csv')
-df_2 = pd.read_csv('/home/katya/Downloads/output/2model.csv')
-df_3 = pd.read_csv('/home/katya/Downloads/output/2model.csv')
+df_1 = pd.read_csv('/home/maxwell/Downloads/output/1model.csv')
+df_2 = pd.read_csv('/home/maxwell/Downloads/output/2model.csv')
+df_3 = pd.read_csv('/home/maxwell/Downloads/output/2model.csv')
 
 def create_graphics(seq, title, model_name, ):
     plt.plot(seq)
     plt.title(f'{title}')
-    plt.savefig(f'graphics/{model_name}/graphic_{title}_{model_name}.png')
+    plt.savefig(f'graphics/{model_name}/graphic_{title}_{model_name}.png')
+
     plt.show()
 
 def func_chi(df1):
@@ -23,8 +24,8 @@ def func_chi(df1):
         for i in range(1, 109):
             p_B.append(list(df1[f'p_B[{i},{j}]']))
 
-    answers_A = pd.read_csv('/home/katya/Downloads/output/data/A.csv')
-    answers_B = pd.read_csv('/home/katya/Downloads/output/data/B.csv')
+    answers_A = pd.read_csv('/home/maxwell/Downloads/output/data/A.csv')
+    answers_B = pd.read_csv('/home/maxwell/Downloads/output/data/B.csv')
 
     x_a = [list(answers_A[f'A{i}']) for i in range(1, 9)]
     x_b = [list(answers_B[f'B{i}']) for i in range(1, 11)]
@@ -88,7 +89,7 @@ def func_chi(df1):
 #print(chi_kvadrat_obs)
 #print(chi_kvadrat_replicated)
 
-with open('/home/katya/Downloads/output/metrics/chi_kvadrat_obs_model_1', 'w') as f:
+with open('/home/maxwell/Downloads/output/metrics/chi_kvadrat_obs_model_1', 'w') as f:
     f.write("Model 1\n")
     chi_kvadrat_obs, chi_kvadrat_replicated = func_chi(df_1)
     f.write(f"{chi_kvadrat_obs}")
@@ -100,7 +101,7 @@ with open('/home/katya/Downloads/output/metrics/chi_kvadrat_obs_model_1', 'w') a
 create_graphics(chi_kvadrat_obs, 'chi_kvadrat_obs', 'model_1', )
 create_graphics(chi_kvadrat_replicated,'chi_kvadrat_replicated', 'model_1', )
 
-with open('/home/katya/Downloads/output/metrics/chi_kvadrat_obs_model_2', 'w') as f:
+with open('/home/maxwell/Downloads/output/metrics/chi_kvadrat_obs_model_2', 'w') as f:
     f.write("Model 2\n")
     chi_kvadrat_obs, chi_kvadrat_replicated = func_chi(df_2)
     f.write(f"{chi_kvadrat_obs}")
@@ -113,7 +114,7 @@ create_graphics(chi_kvadrat_obs, 'chi_kvadrat_obs','model_2', )
 create_graphics(chi_kvadrat_replicated, 'chi_kvadrat_replicated', 'model_2', )
 
 
-with open('/home/katya/Downloads/output/metrics/chi_kvadrat_obs_model_3', 'w') as f:
+with open('/home/maxwell/Downloads/output/metrics/chi_kvadrat_obs_model_3', 'w') as f:
     f.write("Model 3\n")
     chi_kvadrat_obs, chi_kvadrat_replicated = func_chi(df_3)
     f.write(f"{chi_kvadrat_obs}")
